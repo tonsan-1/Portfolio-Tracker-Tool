@@ -52,8 +52,8 @@ namespace Server.Controllers
             var userDTO = new UserModel
             {
                 Username = user.UserName,
-                FirstName = userExists.FirstName is null ? "John" : userExists.FirstName,
-                LastName = userExists.LastName is null ? "Doe" : userExists.LastName,
+                FirstName = user.FirstName is null ? "John" : user.FirstName,
+                LastName = user.LastName is null ? "Doe" : user.LastName,
                 Token = CreateToken(user.UserName)
             };
 
